@@ -17,13 +17,13 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/apple/swift-argument-parser.git", branch: "main"),
-    .package(url: "https://github.com/ml-explore/mlx-swift-examples/", branch: "main"),
+    .package(url: "https://github.com/ml-explore/mlx-swift-lm", branch: "main"),
   ],
   targets: [
     .target(
       name: "EmbedKit",
       dependencies: [
-        .product(name: "MLXEmbedders", package: "mlx-swift-examples"),
+        .product(name: "MLXEmbedders", package: "mlx-swift-lm"),
       ]
     ),
     .executableTarget(
